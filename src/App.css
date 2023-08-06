@@ -12,3 +12,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+.Tile {
+  border: black 0.1em solid;
+  width: 10vw;
+  height: 12vh;
+  background-color: beige;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tile_grid {
+  display: grid;
+  margin: 1em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 0.1em;
+}

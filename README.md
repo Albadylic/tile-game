@@ -100,3 +100,9 @@ function RandomTile() {
 ```
 
 When I had this written out, I realised that I'd need the same logic when creating the grid. In the grid, each tile would have a random symbol. To keep this DRY, I moved the randomSymbol logic out to a helper function which I'd be able to reference in both components.
+
+## Setting state for the Grid
+
+The Grid should only have the symbols revealed once a guess has been made. Otherwise, the user would be able to count occurences and always succeed in their 'guess' – where's the fun in that?!
+
+In order to determine whether the grid should display a symbol or not, we need a state passed between the form and the grid. This would need to be defined in `<App />` and made available to both components.

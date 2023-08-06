@@ -1,7 +1,6 @@
 function Tile({ symbol }: { symbol: string }) {
   return (
-    <article>
-      <p>Tile</p>
+    <article className="Tile">
       <p>{symbol}</p>
     </article>
   );
