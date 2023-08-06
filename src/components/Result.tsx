@@ -1,7 +1,7 @@
-function Result() {
+function Result({ numCorrect }: { numCorrect: number }) {
   return (
     <div>
-      <p>Here's the result</p>
+      <p>Here's the result: {numCorrect}</p>
     </div>
   );
 }

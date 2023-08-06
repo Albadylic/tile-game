@@ -165,3 +165,12 @@ To avoid this, I added state to them `<RandomTile />` which would hold the symbo
 When I added the state, I added it directly inside the component. However, I knew that further down the line this may become problematic. When we want to verify whether the user's guess was correct, we'll need to know what symbol had been randomly selected, and then count occurences of that symbol. We could do this by reading the text from the component later on but this seemed unituitive and hacky.
 
 The better approach to resolving this issue was to bring the state up a level into the `<App />` and this could then be passed both to the `<RandomTile />` and to the eventual `<Result />`.
+
+## Counting correct
+
+To count the number of correct tiles guessed, we run through the grid and check how many times the random symbol occurs.
+
+The approach feels a little strange because we're accepting a guess; generating the grid; and then checking how many tiles of a type occur. Something feels unnatural about this because we'd expect for the tiles to be decided before we make our guess. For our purposes, it doesn't really matter which way round these things occur.
+
+- The approach I assumed I'd use would be to run through all elements and then check if they contained the symbol.
+- Didn't feel like it made sense so I checked the symbol as they were generated and incremented the state. But this gave the error: Maximum update depth exceeded. This can happen when a component repeatedly calls setState inside componentWillUpdate or componentDidUpdate. React limits the number of nested updates to prevent infinite loops.
