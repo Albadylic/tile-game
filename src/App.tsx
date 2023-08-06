@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import * as Components from "./components/";
 
 function App() {
   return (
@@ -7,6 +8,10 @@ function App() {
       <header className="App-header">
         <h1>Tile game</h1>
       </header>
+      <Components.RandomTile />
+      <Components.Form />
+      <Components.Grid />
+      <Components.Result />
     </div>
   );
 }
