@@ -1,11 +1,10 @@
 import Tile from "./Tile";
-import generateRandomSymbol from "../helpers/generateRandomSymbol";
 
-function RandomTile() {
+function RandomTile({ randomSymbol }: { randomSymbol: string }) {
   return (
     <div>
       <p>This is your tile</p>
-      <Tile symbol={generateRandomSymbol()} />
+      <Tile symbol={randomSymbol} />
     </div>
   );
 }
