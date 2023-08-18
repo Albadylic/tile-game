@@ -1,4 +1,4 @@
-# Tile Game
+# Tile Game (work in progress)
 
 This project uses React and Typescript. The goal here was to work with these technologies to further my understanding of both.
 
